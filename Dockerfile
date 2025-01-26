@@ -18,5 +18,8 @@ SHELL ["/bin/bash", "-c"]
 RUN git config --global user.name "rishav" && \
     git config --global user.email "rishav.chatt@gmail.com"
 
+# Configure Git to use credential helper
+RUN git config --global credential.helper store
+
 # Default command to start an interactive bash shell
 CMD ["/bin/bash"]
