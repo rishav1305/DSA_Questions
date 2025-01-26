@@ -18,6 +18,8 @@ SHELL ["/bin/bash", "-c"]
 RUN git config --global user.name "rishav" && \
     git config --global user.email "rishav.chatt@gmail.com"
 
+RUN git config --global url."git@github.com:".insteadOf "https://github.com/"
+
 # Configure Git to use credential helper
 RUN git config --global credential.helper store
 
